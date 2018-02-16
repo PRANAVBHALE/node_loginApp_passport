@@ -1,0 +1,29 @@
+<h2 class="page-header">Login Page</h2>
+<form action="/users/login" method="post">
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" placeholder="Username" name="username">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <!-- <a href="/auth/facebook"><button class="btn btn-primary">Facebook login</button></a> -->
+
+
+
+
+</form>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1172013476269357&autoLogAppEvents=1';
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
