@@ -19,10 +19,17 @@ var mongoose = require('mongoose');
 
 
 
-mongoose.connect('mongodb://localhost/mongo-data-login-reg')
-mongoose.Promise = global.Promise
-var db = mongoose.connection
+//mongoose.connect('mongodb://localhost/mongo-data-login-reg')
+//mongoose.Promise = global.Promise
+//var db = mongoose.connection
 
+let db = {
+      localhost: 'mongodb://localhost:27017/mongo-data-login-reg',
+      mlab: 'mongodb://pranav:bhale@ds239988.mlab.com:39988/loginapp'
+    };
+
+ mongoose.Promise=global.Promise;
+mongoose.connect(db.mlab || db.localhost,{ useMongoClient: true })
 
 
 var routes = require('./routes/index')
