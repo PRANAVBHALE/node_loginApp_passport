@@ -22,8 +22,6 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/mongo-data-login-reg')
 mongoose.Promise = global.Promise
 var db = mongoose.connection
-mongoose.connect(process.env.MONGODB_URI ,{ useMongoClient: true })
-
 
 
 
