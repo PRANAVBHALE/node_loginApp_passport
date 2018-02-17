@@ -23,7 +23,9 @@
     "mongoose": "*",
     "passport": "*",
     "passport-facebook": "^2.1.1",
+    "passport-github": "^1.1.0",
     "passport-google-oauth1": "^1.0.0",
+    "passport-google-oauth2": "^0.1.6",
     "passport-http": "*",
     "passport-local": "*",
     "passport-local-mongoose": "^4.5.0"

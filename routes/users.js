@@ -111,26 +111,7 @@ passport.use(new LocalStrategy(
   }
 ));
 
-var FACEBOOK_APP_ID = 1172013476269357
-var FACEBOOK_APP_SECRET = "ae7912916307824da9ec92d5f55e7bea"
 
-passport.use(new FacebookStrategy({
-    clientID: FACEBOOK_APP_ID,
-    clientSecret: FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/callback"
-  },
-  function(req,accessToken, refreshToken, profile, cb) {
-    console.log(req);
-    console.log(accessToken);
-    console.log(refreshToken);
-    console.log(profile);
-    debugger
-
-    User.findOrCreate({id:profile.id}, function (err, user) {
-      return cb(err, user);
-    });
-  }
-));
 
 // router.get('/auth/facebook',
 //   passport.authenticate('facebook'));

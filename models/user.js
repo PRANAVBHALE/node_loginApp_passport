@@ -6,12 +6,12 @@ var UserSchema = new mongoose.Schema({
 
   username:{
     type:String,
-    required:true
+  //  required:true
   },
 
   name:{
     type:String,
-    required:true
+  //  required:true
   },
 
   mobile:{
@@ -27,19 +27,28 @@ var UserSchema = new mongoose.Schema({
   email:{
     type:String,
   //  unique:true,
-    required:true
+  //  required:true
   },
 
   password:{
     type: String,
-   required: true
- }
+//   required: true
+ },
+
+ googleId: String,
+
+ facebookId:String,
+
+ gitId:String,
+
+ token:String
 })
+
+
 
 //UserSchema.plugin(passportLocalMongoose)
 
 var User = module.exports = mongoose.model('User', UserSchema);
-
 
 module.exports.createUser = function (newUser,callback) {
   bcrypt.genSalt(10,function (err,salt) {
